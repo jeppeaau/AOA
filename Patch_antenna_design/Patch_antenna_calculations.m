@@ -23,16 +23,14 @@ EpsylonReff = (epsylonr +1)/2 + (epsylonr -1)/2 * 1/(sqrt(1+12*h/W));
 DeltaL = h*0.412*((EpsylonReff+0.3)*(W/h+.264))/((EpsylonReff-.258)*(W/h+0.8));
 
 %% Physical length of Patch PL
-PL = c/(2*f*sqrt(EpsylonReff))-2*DeltaL;
+% PL = c/(2*f*sqrt(EpsylonReff))-2*DeltaL;
+
+
+%% I_1 Current Calculations
+I_1 = -2 + cos(k0*W) + k0*W*sinint(k0*W) + sin(k0*W)/(k0*W);
 
 %% Impedence computation G1
-if W * 10 < lambda
-    G1 = 1/90 * (W/lambda)^2;
-elseif W > 10 * lambda
-    G1 = 1/120 * (W/lambda);
-else
-    G1 = 1/90 * (W/lambda)^2;
-end
+G1 = I_1/(120*pi^2);
 
 %% Impedence computation G12
 Z = @(b) k0.*PL.*sin(b);
@@ -43,6 +41,12 @@ G12 =1/(120*pi^2) * integral(X, 0, pi);
 Rin = 50;
 R0 = 1/(2*(G1+G12));
 FeedDistance = acos(sqrt(Rin/R0))*PL/pi;
+
+%% Single patch directivity
+D_0 = (2*pi*W/lambda)^2*1/I_1;
+g12 = G12/G1;
+D_AF = 2/(1 + g12);
+D_2 = D_0*D_AF;
 
 %% Single patch simulation
 PatchAntenna = design (patchMicrostrip, 2.421e9);
@@ -68,13 +72,6 @@ title('Single patch beamwidth (-3dB, \theta = [0:2\pi], \phi = 0)');
 figure
 beamwidth(PatchAntenna, f, 0:1:360, 0, 3)
 title('Single patch beamwidth (-3dB, \theta = 0, \phi = [0:2\pi])');
-
-%% Single patch directivity
-I_1 = -2 + cos(k0*W) + k0*W*sinint(k0*W) + sin(k0*W)/(k0*W);
-D_0 = (2*pi*W/lambda)^2*1/I_1;
-g12 = G12/G1;
-D_AF = 2/(1 + g12);
-D_2 = D_0*D_AF;
 
 %% Array (option 1)
 PatchSpacing = 6e-2;
