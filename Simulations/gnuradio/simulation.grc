@@ -186,7 +186,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(304, 4)</value>
+      <value>(272, 4)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -311,7 +311,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>0</value>
+      <value>0.02</value>
     </param>
   </block>
   <block>
@@ -930,7 +930,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1104, 268)</value>
+      <value>(1128, 268)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1476,7 +1476,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1048, 152)</value>
+      <value>(1088, 320)</value>
     </param>
     <param>
       <key>gui_hint</key>
