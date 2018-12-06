@@ -12,7 +12,7 @@ lambda = c/f;
 k0 = 2*pi/lambda;
 
 %% Calculate the Width of patch antenna
-epsylonr = 3.9;
+epsylonr = 4.7;
 W = (lambda/2)*sqrt(2/(epsylonr + 1));
 
 %% Epsilon Reff for W > h

@@ -18,3 +18,5 @@
 *.a
 *.la
 *.lo
+
+.DS_Store
