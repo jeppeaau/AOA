@@ -1,9 +1,8 @@
 %%*****---------------------------------------------------------------*****
 %{
-
     - This script designs a patch antenna and its corresponding 2-element
     array for an operating frequency of 2.421 GHz.
-
+    - Pattern and HPBW simulations are included.
 %}
 %%*****---------------------------------------------------------------*****
 
