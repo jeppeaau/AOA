@@ -85,8 +85,8 @@ tof_A = dof_A./c;
 tof_B = dof_B./c;
 
 % Compute phase of each antenna
-phs_A=zeros(length(tof_A), length(t));  % Preallocate space
-phs_B=zeros(length(tof_B), length(t));
+phs_A = zeros(length(tof_A), length(t));  % Preallocate space
+phs_B = zeros(length(tof_B), length(t));
 for i=1:1:length(tof_A)   
     phs_A(i,:) = 2*pi*f.*(t + tof_A(i));  % Phases of the equivalent signals at A and B
     phs_B(i,:) = 2*pi*f.*(t + tof_B(i));  
@@ -94,8 +94,8 @@ end
 
 % Phase shift
 phsShift = phs_B - phs_A; % Right antenna as phase reference
-linearArray.PhaseShift = [phsShift 0];
-az_angle = 1:1:180;
-el_angle = -180:1:180;
+PatchArray.PhaseShift = [0 rad2deg(phsShift(1))];
+az_angle = 1:1:360;
+el_angle = 1:1:180;
 figure
-pattern(linearArray, f, 0, el_angle, 'CoordinateSystem', 'rectangular');
+pattern(PatchArray, f, 0, el_angle, 'CoordinateSystem', 'rectangular');
