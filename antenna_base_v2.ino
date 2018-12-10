@@ -35,16 +35,16 @@ float error_omega=0;
 float error_omega_previous=0;
 
 // Parameters of position controller
-const float k_p=6.291;
+const float k_p=6.258;
 
 // Parameters of speed controller. The controller implemented has the form:
 //             a_0 + a_1*z^(-1)
 //    D(z) = -------------------
 //              1 + b_1*z^(-1)
-const float a_0=2.9861;
-const float a_1=-2.98;
+const float a_0=2.967;
+const float a_1=-2.961;
 const float b_1=-1;
-// Current settings: f_omega=20; f_theta=10; f_samp=800;
+// Current settings: f_omega=62.5/pi; f_theta=3.125/pi; f_samp=2500/pi;
 
 // Variables related to the control action (volts)
 float u_control=0;
@@ -56,10 +56,8 @@ uint32_t u_control_pwm=0;
 // Variables used for timing
 uint32_t speed_timer=0;             // Used to compute the speed by differenciating the position
 uint32_t control_timer=0;           // Used to execute the control loop every sampling period
-const uint16_t samp_period=1250;    // Samplng period specified in microseconds
-uint8_t speed_null=1;               // Variable used to find if the motor is not moving
-// 0 -> Motor is moving
-// 1 -> Motor is not moving
+const uint16_t samp_period=1257;    // Samplng period specified in microseconds
+uint16_t speed_counter=0;           // Variable used to compute the speed
 
 // Variable used for serial communication
 union {
@@ -76,17 +74,14 @@ void position_int()
     {
         // Increase position and compute speed
         theta_current+=theta_increment;
-        omega_current=theta_increment/(micros()-speed_timer);
+        speed_counter++;
     }
     else
     {
         // Decrease position and compute speed
         theta_current-=theta_increment;
-        omega_current=-theta_increment/(micros()-speed_timer);
+        speed_counter--;
     }
-    // Save current time and set variable speed_null to 0.
-    speed_timer=micros();
-    speed_null=0;
 }
 
 void setup()
@@ -127,24 +122,9 @@ void loop()
         // Store current time for next iteration of the loop
         control_timer=micros();
         
-        // This code if compiled if TRIAL is defined. Functionality not checked
-        #ifdef TRIAL
-        {
-            // Check if the interrupt has been called since the last iteration
-            // to find if the speed is null
-            if(speed_null==1)
-            {
-                // If it has not been called, the motor is stopped
-                // and the value of omega_current may not be correct
-                omega_current=0;     
-            }
-            else
-            {
-                // Reset speed_null variable
-                speed_null=1;
-            }
-        }
-        #endif
+        // Compute speed of the Motor
+        omega_current=10.0*speed_counter;
+        speed_counter=0;
         
         // Store previous variables, error and control action
         u_control_previous=u_control;
@@ -159,7 +139,6 @@ void loop()
         
         // Compute control voltage from speed controller
         u_control=a_0*error_omega+a_1*error_omega_previous-b_1*u_control_previous;
-        u_control=k_p*error_omega;
         
         // Compute u_control_pwm and limit its value to a 16 bit value
         u_control_pwm=(uint32_t)interpolate(fabsf(u_control), 0, V_MAX, 0, 65535);
