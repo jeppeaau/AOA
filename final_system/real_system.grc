@@ -473,7 +473,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(768, 412)</value>
+      <value>(768, 348)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -516,7 +516,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>freq</key>
@@ -587,7 +587,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(632, 612)</value>
+      <value>(632, 548)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -824,49 +824,6 @@
     </param>
   </block>
   <block>
-    <key>blocks_complex_to_float</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(1080, 200)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>blocks_complex_to_float_0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-  </block>
-  <block>
     <key>blocks_file_sink</key>
     <param>
       <key>append</key>
@@ -886,7 +843,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>file</key>
@@ -894,11 +851,11 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(840, 56)</value>
+      <value>(1104, 64)</value>
     </param>
     <param>
       <key>_rotation</key>
-      <value>180</value>
+      <value>0</value>
     </param>
     <param>
       <key>id</key>
@@ -937,7 +894,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(768, 456)</value>
+      <value>(768, 392)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1078,7 +1035,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(872, 140)</value>
+      <value>(872, 52)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1090,7 +1047,7 @@
     </param>
     <param>
       <key>type</key>
-      <value>complex</value>
+      <value>float</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -1176,7 +1133,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(808, 576)</value>
+      <value>(808, 512)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1208,14 +1165,159 @@
     </param>
   </block>
   <block>
+    <key>blocks_null_sink</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bus_conns</key>
+      <value>[[0,],]</value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(440, 160)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>180</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_null_sink_0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>num_inputs</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_transcendental</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>name</key>
+      <value>acos</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(944, 212)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_transcendental_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>float</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_transcendental</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>name</key>
+      <value>asin</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(760, 156)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>180</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_transcendental_1</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>float</value>
+    </param>
+  </block>
+  <block>
     <key>epy_block</key>
+    <param>
+      <key>baud_rate</key>
+      <value>250000</value>
+    </param>
     <param>
       <key>alias</key>
       <value></value>
     </param>
     <param>
       <key>_io_cache</key>
-      <value>('Complex acos', 'blk', [], [('0', 'float', 1)], [('0', 'complex', 1)], 'Embedded Python Block example - a simple multiply const', [])</value>
+      <value>('Float Serial Sink', 'blk', [('baud_rate', '19200'), ('port_name', "'/dev/cu.usbmodem1421'"), ('period', '5.0')], [('0', 'float', 1)], [('0', 'float', 1)], ' SUPER AWESOME SERIAL PORT\n    IT WORKS WITH MAGIK (AND SOME PYTHON)\n    COUNTER IS USED TO AVOID KILLING THE\n    POOR ARDUINO. BE CAREFUL ', ['period'])</value>
     </param>
     <param>
       <key>_source_code</key>
@@ -1229,25 +1331,42 @@ be the parameters. All of them are required to have default values!
 
 import numpy as np
 from gnuradio import gr
+import serial
+from time import time
+import struct
 
 
 class blk(gr.sync_block):  # other base classes are basic_block, decim_block, interp_block
-    """Embedded Python Block example - a simple multiply const"""
+    """ SUPER AWESOME SERIAL PORT
+    IT WORKS WITH MAGIK (AND SOME PYTHON)
+    COUNTER IS USED TO AVOID KILLING THE
+    POOR ARDUINO. BE CAREFUL """
 
-    def __init__(self):  # only default arguments here
+    def __init__(self, baud_rate=250000, port_name='/dev/cu.usbmodem1421', period=0.1):  # only default arguments here
         """arguments to this function show up as parameters in GRC"""
         gr.sync_block.__init__(
             self,
-            name='Complex acos',   # will show up in GRC
+            name='Float Serial Sink',   # will show up in GRC
             in_sig=[np.float32],
-            out_sig=[np.complex64]
+            out_sig=[np.float32],
         )
         # if an attribute with the same name as a parameter is found,
         # a callback is registered (properties work, too).
+        self.serial_device=serial.Serial(port_name,baud_rate)
+        self.period=period
+        self.time_var=time()
 
     def work(self, input_items, output_items):
         """example: multiply with constant"""
-        output_items[0][:] = np.arccos(np.complex64(input_items[0]))
+
+        if(time()-self.time_var&gt;=self.period):
+            avg_result=np.mean(input_items[0])
+            byte_result=bytearray(struct.pack("f", avg_result))
+            a=self.serial_device.write(byte_result)
+            self.time_var=time()
+            print('Message sent at t = {} s\nBytes sent = {}\n'.format(self.time_var,a))
+
+        output_items[0][:] = input_items[0]
         return len(output_items[0])
 </value>
     </param>
@@ -1261,15 +1380,23 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(920, 216)</value>
+      <value>(552, 144)</value>
     </param>
     <param>
       <key>_rotation</key>
-      <value>0</value>
+      <value>180</value>
     </param>
     <param>
       <key>id</key>
-      <value>epy_block_0</value>
+      <value>epy_block_1</value>
+    </param>
+    <param>
+      <key>period</key>
+      <value>0.1</value>
+    </param>
+    <param>
+      <key>port_name</key>
+      <value>'/dev/cu.usbmodem1421'</value>
     </param>
   </block>
   <block>
@@ -1292,7 +1419,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1064, 136)</value>
+      <value>(1120, 216)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -1300,7 +1427,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     </param>
     <param>
       <key>_rotation</key>
-      <value>180</value>
+      <value>0</value>
     </param>
     <param>
       <key>id</key>
@@ -1347,7 +1474,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>fftsize</key>
@@ -1646,7 +1773,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>fftsize</key>
@@ -1945,7 +2072,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>fftsize</key>
@@ -2607,7 +2734,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(672, 120)</value>
+      <value>(672, 32)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -2915,7 +3042,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     </param>
     <param>
       <key>type</key>
-      <value>complex</value>
+      <value>float</value>
     </param>
     <param>
       <key>update_time</key>
@@ -3606,7 +3733,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -4433,7 +4560,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(936, 552)</value>
+      <value>(936, 488)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -6002,12 +6129,6 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>blocks_complex_to_float_0</source_block_id>
-    <sink_block_id>polar_plot_1</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
     <source_block_id>blocks_magphase_to_complex_0</source_block_id>
     <sink_block_id>blocks_multiply_xx_0</sink_block_id>
     <source_key>0</source_key>
@@ -6021,7 +6142,13 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
   </connection>
   <connection>
     <source_block_id>blocks_multiply_const_vxx_0</source_block_id>
-    <sink_block_id>epy_block_0</sink_block_id>
+    <sink_block_id>blocks_transcendental_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_multiply_const_vxx_0</source_block_id>
+    <sink_block_id>blocks_transcendental_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -6044,20 +6171,26 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>epy_block_0</source_block_id>
-    <sink_block_id>blocks_complex_to_float_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>epy_block_0</source_block_id>
-    <sink_block_id>blocks_file_sink_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>epy_block_0</source_block_id>
+    <source_block_id>blocks_transcendental_0</source_block_id>
     <sink_block_id>blocks_multiply_const_vxx_1</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_transcendental_0</source_block_id>
+    <sink_block_id>polar_plot_1</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_transcendental_1</source_block_id>
+    <sink_block_id>epy_block_1</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>epy_block_1</source_block_id>
+    <sink_block_id>blocks_null_sink_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
