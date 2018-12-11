@@ -33,6 +33,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
         self.period=period
         self.time_var=time()
 
+
     def work(self, input_items, output_items):
         """example: multiply with constant"""
 

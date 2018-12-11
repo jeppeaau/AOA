@@ -19,7 +19,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     COUNTER IS USED TO AVOID KILLING THE
     POOR ARDUINO. BE CAREFUL """
 
-    def __init__(self, baud_rate=19200, port_name='/dev/cu.usbmodem1421', period=5.0):  # only default arguments here
+    def __init__(self, baud_rate=250000, port_name='/dev/cu.usbmodem1421', period=0.1):  # only default arguments here
         """arguments to this function show up as parameters in GRC"""
         gr.sync_block.__init__(
             self,
