@@ -29,25 +29,20 @@ const float theta_increment=2*pi/pulse_per_rev;
 float omega_current=0;
 float omega_ref=0;
 float error_omega=0;
-float error_omega_previous=0;
 
 // Parameters of the controllers
-const float k_p=2;
-// const float k_p=4;
-const float a_0=0.04878;
-const float a_1=-0.04265;
-const float b_1=-1;
+const float k_theta=21.36;
+const float k_omega=0.2957;
 
 // Variables of the control voltage
 float u_control=0;
-float u_control_previous=0;
 uint32_t duty=0;
 
 // Variable used to time the iterations of the control loop
 uint16_t timer_var=0;
 
 // Samplng period specified in microseconds
-const uint16_t samp_period=2500;
+const uint16_t samp_period=556;
 
 // Serial communication
 uint8_t buffer[4];
@@ -98,19 +93,14 @@ void loop()
         
         // Compute speed from previous position and store current position
         omega_current=1e6*(theta_current-theta_previous)/samp_period;
-        // if(omega_current<20 && omega_current>0)
-        //     omega_current=0;
-        // else if(omega_current>-20 && omega_current<0)
-        //     omega_current=0;
         
         // Measure error in position
         error_theta=theta_ref-theta_current;
-        omega_ref=k_p*error_theta;
+        omega_ref=k_theta*error_theta;
         
         // Compute control voltage from speed controller
         error_omega=omega_ref-omega_current;
-        // u_control=a_0*error_omega+a_1*error_omega_previous-b_1*u_control_previous;
-        u_control=k_p*error_omega;
+        u_control=k_omega*error_omega;
         
         // Compute duty and limit its value
         duty=(uint32_t)interpolate(fabsf(u_control), 0, V_MAX, 0, 65535);
@@ -134,9 +124,7 @@ void loop()
         // Write PWM duty cycle
         pwm_write_duty(PWM_PIN, duty);
         
-        // Store previous variables
+        // Store current position
         theta_previous=theta_current;
-        u_control_previous=u_control;
-        error_omega_previous=error_omega;
     }
 }
