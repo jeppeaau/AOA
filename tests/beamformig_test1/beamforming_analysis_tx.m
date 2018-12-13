@@ -7,7 +7,7 @@
     into the differen zones and generates a binary file for each of them. 
     - Complementary files needed: "bin2complex.m", "test1tx1.bin",
     "test1tx2.bin".
-    - Output file sintaxis: "data_aXzY_tx.bin" means Tx file for antenna X
+    - Output file sintaxis: "data_tx_aXzY.bin" means Tx file for antenna X
     corresponding to zone Y.
 
 %}
@@ -53,7 +53,7 @@ for i=1:1:length(input_files)        % Iterate over number of antennas
        subplot(4, 2, j)
        plot(data_zones(j,:,i));      % Plot siganls for each zone
        grid on
-       axis([0 length(data_zones(j,:,i)) -0.12 0.12]);
+       axis([0 length(data_zones(j,:,i)) 1.2*min(data_tx(i,:)) 1.2*max(data_tx(i,:))]);
        title("Tx Antenna " + num2str(i) + ", " + "Zone " + num2str(j));
        xlabel("Sample number");
        ylabel("Amplitude");
@@ -62,8 +62,8 @@ end
 
 %% Write zone values to new binary file
 % Names of the output files
-output_files = ["data_a1z1_tx.bin" "data_a1z2_tx.bin" "data_a1z3_tx.bin" "data_a1z4_tx.bin" "data_a1z5_tx.bin" "data_a1z6_tx.bin" "data_a1z7_tx.bin" "data_a1z8_tx.bin";
-                "data_a2z1_tx.bin" "data_a2z2_tx.bin" "data_a2z3_tx.bin" "data_a2z4_tx.bin" "data_a2z5_tx.bin" "data_a2z6_tx.bin" "data_a2z7_tx.bin" "data_a2z8_tx.bin"];
+output_files = ["data_tx_a1z1.bin" "data_tx_a1z2.bin" "data_tx_a1z3.bin" "data_tx_a1z4.bin" "data_tx_a1z5.bin" "data_tx_a1z6.bin" "data_tx_a1z7.bin" "data_tx_a1z8.bin";
+                "data_tx_a2z1.bin" "data_tx_a2z2.bin" "data_tx_a2z3.bin" "data_tx_a2z4.bin" "data_tx_a2z5.bin" "data_tx_a2z6.bin" "data_tx_a2z7.bin" "data_tx_a2z8.bin"];
 f_out = zeros(length(divs_tx), length(divs_tx));
 for i=1:1:length(input_files)
     for j=1:1:length(divs_tx)

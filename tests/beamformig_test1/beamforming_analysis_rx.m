@@ -7,7 +7,7 @@
     into the different zones and generates a binary file for each of them.
     - Complementary files needed: "bin2complex.m", "test1antenna1.bin",
     "test1antenna2.bin".
-    - Output file sintaxis: "data_aXzY_rx.bin" means Rx file for antenna X
+    - Output file sintaxis: "data_rx_aXzY.bin" means Rx file for antenna X
     corresponding to zone Y.
 
 %}
@@ -62,8 +62,8 @@ end
 
 %% Write zone values to new binary file
 % Names of the output files
-output_files = ["data_a1z1_rx.bin" "data_a1z2_rx.bin" "data_a1z3_rx.bin" "data_a1z4_rx.bin" "data_a1z5_rx.bin" "data_a1z6_rx.bin" "data_a1z7_rx.bin" "data_a1z8_rx.bin";
-                "data_a2z1_rx.bin" "data_a2z2_rx.bin" "data_a2z3_rx.bin" "data_a2z4_rx.bin" "data_a2z5_rx.bin" "data_a2z6_rx.bin" "data_a2z7_rx.bin" "data_a2z8_rx.bin"];
+output_files = ["data_rx_a1z1.bin" "data_rx_a1z2.bin" "data_rx_a1z3.bin" "data_rx_a1z4.bin" "data_rx_a1z5.bin" "data_rx_a1z6.bin" "data_rx_a1z7.bin" "data_rx_a1z8.bin";
+                "data_rx_a2z1.bin" "data_rx_a2z2.bin" "data_rx_a2z3.bin" "data_rx_a2z4.bin" "data_rx_a2z5.bin" "data_rx_a2z6.bin" "data_rx_a2z7.bin" "data_rx_a2z8.bin"];
 f_out = zeros(length(divs_rx), length(divs_rx));
 for i=1:1:2
     for j=1:1:length(divs_rx)

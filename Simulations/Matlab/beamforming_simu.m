@@ -95,7 +95,13 @@ end
 
 % Phase shift
 phsShift = phs_B(1) - phs_A(1);           % Left antenna as phase reference
-PatchArray.PhaseShift = [0 rad2deg(phsShift)];
+if phsShift > 0
+    PatchArray.PhaseShift = [0 rad2deg(phsShift)];
+elseif phsShift < 0
+    PatchArray.PhaseShift = [rad2deg(phsShift) 0];
+elseif phsShift == 0
+    PatchArray.PhaseShift = [0 0];
+end
 az_angle = 1:1:360;
 el_angle = 1:1:180;
 figure
