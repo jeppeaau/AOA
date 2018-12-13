@@ -1,8 +1,12 @@
 %%*****---------------------------------------------------------------*****
 %{
 
+    - This script analyzes the signals received by the 2 antennas in the
+    beamformin process.
     - This script extracts the data obtained through GNU Radio, splits it
     into the different zones and generates a binary file for each of them.
+    - Complementary files needed: "bin2complex.m", "test1antenna1.bin",
+    "test1antenna2.bin".
 
 %}
 %%*****---------------------------------------------------------------*****
@@ -21,21 +25,6 @@ for i=1:1:2
     data_rx(i,:) = (real(bin2complex(f_in(i))))';
     fclose(f_in(i));
 end
-
-%{
-f_rx1 = fopen('~/Documentos/beamforming_data/test1antenna1', 'r');
-data_rx1 = real(bin2complex(f_rx1));
-data_rx1 = data_rx1';
-fclose(f_rx1);
-
-f_rx2 = fopen('~/Documentos/beamforming_data/test1antenna2', 'r');
-data_rx2 = real(bin2complex(f_rx2));
-data_rx2 = data_rx2';
-fclose(f_rx2);
-
-data_rx(1,:) = data_rx1;
-data_rx(2,:) = data_rx2;
-%}
 
 %% Plot raw data
 figure;
