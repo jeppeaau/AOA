@@ -2,8 +2,8 @@
 %{
 
     - This script analyzes the signals received by the 2 antennas in the
-    beamformin process.
-    - This script extracts the data obtained through GNU Radio, splits it
+    beamforming process.
+    - This script extracts the data obtained through GNU Radio, splits them
     into the different zones and generates a binary file for each of them.
     - Complementary files needed: "bin2complex.m", "test1antenna1.bin",
     "test1antenna2.bin".
@@ -18,7 +18,7 @@ clc
 
 %% Read data from GNU Radio output binaries
 input_files = ["test1antenna1" "test1antenna2"];
-f_in = zeros(2);
+f_in = zeros(length(input_files));
 data_rx = zeros(length(input_files), 22478519);
 for i=1:1:2
     f_in(i) = fopen(input_files(i), 'r');
@@ -34,9 +34,10 @@ for i=1:1:2
     hold on
     grid on
     axis([0 length(data_rx(i,:)) 1.2*min(data_rx(i,:)) 1.2*max(data_rx(i,:))]);
-    title("Antenna " + num2str(i) + " " + "raw data");
+    title("Rx Antenna " + num2str(i) + " " + "raw data");
     xlabel('Sample number');
     ylabel('Amplitude');
+    hold off
 end
 
 %% Divide datasets into zones
@@ -53,7 +54,7 @@ for i=1:1:2
        plot(data_zones(j,:,i));
        grid on
        axis([0 length(data_zones(j,:,i)) -0.12 0.12]);
-       title("Antenna " + num2str(i) + ", " + "Zone " + num2str(j));
+       title("Rx Antenna " + num2str(i) + ", " + "Zone " + num2str(j));
        xlabel("Sample number");
        ylabel("Amplitude");
     end
