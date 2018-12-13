@@ -45,7 +45,6 @@ zone_size = 5e3;
 %divs_rx1 = [1 2.3e6 3.95e6 5.63e6 7.1e6 7.9e6 9.27e6 10.8e6 12.1e6 13.5e6 14.9e6 16.4e6 17.8e6 18.7e6 20e6 21e6 22.3e6 length(data_rx1)];
 divs_rx = [1e6 3.95e6 7.2e6 9.5e6 13e6 15e6 18e6 21e6];
 data_zones = zeros(length(divs_rx), zone_size, length(input_files));
-%figure
 for i=1:1:2
     figure
     for j=1:1:8
@@ -61,8 +60,8 @@ for i=1:1:2
 end
 
 %% Write zone values to new binary file
-output_files = ["data11.bin" "data12.bin" "data13.bin" "data14.bin" "data15.bin" "data16.bin" "data17.bin" "data18.bin";
-                "data21.bin" "data22.bin" "data23.bin" "data24.bin" "data25.bin" "data26.bin" "data27.bin" "data28.bin"];
+output_files = ["data11_rx.bin" "data12_rx.bin" "data13_rx.bin" "data14_rx.bin" "data15_rx.bin" "data16_rx.bin" "data17_rx.bin" "data18_rx.bin";
+                "data21_rx.bin" "data22_rx.bin" "data23_rx.bin" "data24_rx.bin" "data25_rx.bin" "data26_rx.bin" "data27_rx.bin" "data28_rx.bin"];
 f_out = zeros(length(divs_rx), length(divs_rx));
 for i=1:1:2
     for j=1:1:length(divs_rx)
