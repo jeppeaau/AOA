@@ -140,9 +140,5 @@ void loop()
         
         // Store current position
         theta_previous=theta_current;
-        
-        // Send current position through the serial port to the computer
-        Serial.write((uint8_t*)&theta_current, sizeof(theta_current));
-        Serial.flush();
     }
 }
