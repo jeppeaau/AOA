@@ -123,7 +123,7 @@ void loop()
             duty=65535;
         }
         
-        // Choose direction of the motor according to 
+        // Choose direction of the motor according to the value of u_control
         if (u_control > 0)
         {
             digitalWrite(DIR_LEFT, HIGH);
