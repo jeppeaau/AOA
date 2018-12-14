@@ -14,7 +14,7 @@
 %%*****---------------------------------------------------------------*****
 
 %% Clean stuff
-clear alltests
+clear all
 close all
 clc
 
