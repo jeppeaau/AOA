@@ -2,7 +2,7 @@
 %{
 
     - This script analyzes the signals received by the 2 antennas in the
-    beamforming process.
+    beamforming experiment.
     - This script extracts the data obtained through GNU Radio, splits them
     into the different zones and generates a binary file for each of them.
     - Complementary files needed: "bin2complex.m", "test1antenna1.bin",
