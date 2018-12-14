@@ -1,7 +1,9 @@
+// Inclusion of necessary libraries
 #include <Arduino.h>
 #include <stdint.h>
 #include "pwm01.h"
 
+// Definition of I/O pins and constant values
 #define ENCODEA 2
 #define ENCODEB 3
 #define MOTOR_ENA 12
@@ -9,8 +11,9 @@
 #define DIR_RIGHT 11
 #define PWM_PIN 6
 #define pi 3.14159
+#define PWM_FREQ 20000
 #define pulse_per_rev 500
-#define V_MAX 12
+#define V_MAX 16
 
 // Interpolation function, based on Arduino map function with float numbers
 float interpolate(float x, float in_min, float in_max, float out_min, float out_max)
@@ -18,36 +21,37 @@ float interpolate(float x, float in_min, float in_max, float out_min, float out_
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
-// Variables related to position
+// Variables related to position. All in radians
 float theta_current=0;
 float theta_previous=0;
 float theta_ref=0;
 float error_theta=0;
+// Angle in radians that corrsponds to a pulse of the encoder
 const float theta_increment=2*pi/pulse_per_rev;
 
-// Variables related to velocity
+// Variables related to velocity. All in radians per second
 float omega_current=0;
 float omega_ref=0;
 float error_omega=0;
 
 // Parameters of the controllers
-const float k_theta=21.36;
-const float k_omega=0.2957;
+const float k_theta=31.87;
+const float k_omega=5.838;
 
-// Variables of the control voltage
+// Variables related to the control voltage
 float u_control=0;
 uint32_t duty=0;
 
 // Variable used to time the iterations of the control loop
 uint16_t timer_var=0;
 
-// Samplng period specified in microseconds
-const uint16_t samp_period=556;
+// Sampling period specified in microseconds
+const uint32_t samp_period=667;
 
-// Serial communication
+// Serial communication input buffer
 uint8_t buffer[4];
 
-// Function that measures the position of the encoder
+// Interrupt function that measures the position of the encoder
 void position_int()
 {
     if (digitalRead(ENCODEB))
@@ -60,56 +64,66 @@ void position_int()
     }
 }
 
+// Initial configuration of the Arduino
 void setup()
 {
+    // Start serial communication at maximum baud rate
     Serial.begin(250000);
     
+    // I/O configuration
     pinMode(MOTOR_ENA, OUTPUT);
     pinMode(DIR_LEFT, OUTPUT);
     pinMode(DIR_RIGHT, OUTPUT);
     pinMode(ENCODEA, INPUT_PULLUP);
     pinMode(ENCODEB, INPUT_PULLUP);
     
-    attachInterrupt(digitalPinToInterrupt(ENCODEA),position_int,FALLING);
-    digitalWrite(MOTOR_ENA,HIGH);              // enabling motor
-    pwm_setup(6,32000,2);                      //set pwm frequencey to 32 khz on pin 6 with timer 2
-    pwm_set_resolution(16);                    // Set PWM Resolution
+    // Interrupt configuration, PWM configuration and enabling the motor
+    attachInterrupt(digitalPinToInterrupt(ENCODEA), position_int, FALLING);
+    digitalWrite(MOTOR_ENA, HIGH);
+    pwm_setup(PWM_PIN, PWM_FREQ, 2); 
+    pwm_set_resolution(16);
     
+    // Store initial system time
     timer_var=micros();
 }
 
+// Infinite loop
 void loop()
-{
+{   
+    // Checks if there is a new reference position
     if(Serial.available() >= sizeof(float))
     {
+        // If there is a new reference, it is read and bytes
+        // and casted into a float number
         Serial.readBytes(buffer,sizeof(float));
         memcpy(&theta_ref,buffer,sizeof(float));
-    }
+    } 
     
+    // Check if a sampling period has passed since the last stored system time
     if(micros()-timer_var >= samp_period)
     {        
-        // Set variable for software timer
+        // Store current system time
         timer_var=micros();
         
-        // Compute speed from previous position and store current position
+        // Compute speed from previous position and current position
         omega_current=1e6*(theta_current-theta_previous)/samp_period;
         
-        // Measure error in position
+        // Measure error in position and compute reference speed
         error_theta=theta_ref-theta_current;
         omega_ref=k_theta*error_theta;
         
-        // Compute control voltage from speed controller
+        // Measure speed error and compute control voltage
         error_omega=omega_ref-omega_current;
         u_control=k_omega*error_omega;
         
-        // Compute duty and limit its value
+        // Compute duty and limit its value to a 16 bit variable
         duty=(uint32_t)interpolate(fabsf(u_control), 0, V_MAX, 0, 65535);
         if(duty>65535)
         {
             duty=65535;
         }
         
-        // Choose direction of the motor
+        // Choose direction of the motor according to 
         if (u_control > 0)
         {
             digitalWrite(DIR_LEFT, HIGH);
@@ -126,5 +140,9 @@ void loop()
         
         // Store current position
         theta_previous=theta_current;
+        
+        // Send current position through the serial port to the computer
+        Serial.write((uint8_t*)&theta_current, sizeof(theta_current));
+        Serial.flush();
     }
 }
