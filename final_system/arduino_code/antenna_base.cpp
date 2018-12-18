@@ -35,8 +35,8 @@ float omega_ref=0;
 float error_omega=0;
 
 // Parameters of the controllers
-const float k_theta=31.87;
-const float k_omega=5.838;
+const float k_theta=12.84;
+const float k_omega=2.331;
 
 // Variables related to the control voltage
 float u_control=0;
@@ -46,7 +46,7 @@ uint32_t duty=0;
 uint16_t timer_var=0;
 
 // Sampling period specified in microseconds
-const uint32_t samp_period=667;
+const uint32_t samp_period=1250;
 
 // Serial communication input buffer
 uint8_t buffer[4];
