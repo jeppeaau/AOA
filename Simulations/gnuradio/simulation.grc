@@ -30,7 +30,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(0, 0)</value>
+      <value>(8, 8)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -101,7 +101,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(160, 96)</value>
+      <value>(168, 104)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -113,7 +113,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>20</value>
+      <value>200</value>
     </param>
   </block>
   <block>
@@ -128,7 +128,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(152, 48)</value>
+      <value>(160, 56)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -155,7 +155,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(0, 96)</value>
+      <value>(8, 104)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -182,7 +182,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(136, 0)</value>
+      <value>(144, 8)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -213,7 +213,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(416, 4)</value>
+      <value>(360, 12)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -272,7 +272,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(208, 0)</value>
+      <value>(216, 8)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -299,7 +299,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(264, 0)</value>
+      <value>(272, 8)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -326,7 +326,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(80, 48)</value>
+      <value>(88, 56)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -353,7 +353,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(80, 96)</value>
+      <value>(88, 104)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -380,7 +380,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(0, 48)</value>
+      <value>(8, 56)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -407,7 +407,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(248, 48)</value>
+      <value>(256, 56)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -420,6 +420,53 @@
     <param>
       <key>value</key>
       <value>frequency/10</value>
+    </param>
+  </block>
+  <block>
+    <key>analog_const_source_x</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>const</key>
+      <value>5*pi/180*56/12</value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1032, 36)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>180</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>analog_const_source_x_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>float</value>
     </param>
   </block>
   <block>
@@ -446,7 +493,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>type</key>
@@ -454,7 +501,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(224, 264)</value>
+      <value>(232, 272)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -525,7 +572,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>type</key>
@@ -533,7 +580,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(336, 408)</value>
+      <value>(344, 416)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -596,11 +643,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(688, 328)</value>
+      <value>(696, 336)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -643,11 +690,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(232, 452)</value>
+      <value>(240, 460)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -694,11 +741,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(528, 312)</value>
+      <value>(536, 320)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -741,11 +788,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(840, 324)</value>
+      <value>(848, 332)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -796,7 +843,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(640, 120)</value>
+      <value>(520, 128)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -835,7 +882,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>name</key>
@@ -843,7 +890,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1000, 324)</value>
+      <value>(1008, 332)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -882,7 +929,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>name</key>
@@ -890,7 +937,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(984, 116)</value>
+      <value>(992, 124)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -925,54 +972,54 @@
     </param>
     <param>
       <key>_io_cache</key>
-      <value>('Float Serial Sink', 'blk', [('baud_rate', '19200'), ('port_name', "'/dev/cu.usbmodem1421'"), ('period', '5.0')], [('0', 'float', 1)], [('0', 'float', 1)], ' SUPER AWESOME SERIAL PORT\n    IT WORKS WITH MAGIK (AND SOME PYTHON)\n    COUNTER IS USED TO AVOID KILLING THE\n    POOR ARDUINO. BE CAREFUL ', ['period'])</value>
+      <value>('Float Serial Sink', 'blk', [('baud_rate', '250000'), ('port_name', "'/dev/cu.usbmodem1421'"), ('period', '1.0')], [('0', 'float', 1)], [('0', 'float', 1)], ' Serial Port Block\n    It starts a communication with the specified port and\n    the specified baud rate. It sends the reference for\n    the motor with a certain frequency, specified by period', ['period'])</value>
     </param>
     <param>
       <key>_source_code</key>
-      <value>"""
-Embedded Python Blocks:
-
-Each time this file is saved, GRC will instantiate the first class it finds
-to get ports and parameters of your block. The arguments to __init__  will
-be the parameters. All of them are required to have default values!
-"""
-
+      <value># Import libraries and neccesary functions
 import numpy as np
 from gnuradio import gr
 import serial
 from time import time
 import struct
 
+# Definition of the block class
+class blk(gr.sync_block):
+    """ Serial Port Block
+    It starts a communication with the specified port and
+    the specified baud rate. It sends the reference for
+    the motor with a certain frequency, specified by period"""
 
-class blk(gr.sync_block):  # other base classes are basic_block, decim_block, interp_block
-    """ SUPER AWESOME SERIAL PORT
-    IT WORKS WITH MAGIK (AND SOME PYTHON)
-    COUNTER IS USED TO AVOID KILLING THE
-    POOR ARDUINO. BE CAREFUL """
-
-    def __init__(self, baud_rate=19200, port_name='/dev/cu.usbmodem1421', period=5.0):  # only default arguments here
-        """arguments to this function show up as parameters in GRC"""
+    def __init__(self, baud_rate=250000, port_name='/dev/cu.usbmodem1421', period=1.0):
         gr.sync_block.__init__(
             self,
             name='Float Serial Sink',   # will show up in GRC
             in_sig=[np.float32],
             out_sig=[np.float32],
         )
-        # if an attribute with the same name as a parameter is found,
-        # a callback is registered (properties work, too).
+
         self.serial_device=serial.Serial(port_name,baud_rate)
         self.period=period
         self.time_var=time()
+        self.previous_ref=0;
 
     def work(self, input_items, output_items):
-        """example: multiply with constant"""
-
+        """Serial Port Block"""
+        # Checks if a sampling period has passed since the last message sent
         if(time()-self.time_var&gt;=self.period):
+            # Averages the block input buffer and computes the reference
+            # based on the previous reference
             avg_result=np.mean(input_items[0])
-            byte_result=bytearray(struct.pack("f", avg_result))
-            a=self.serial_device.write(byte_result)
+            theta_ref=self.previous_ref+avg_result
+            
+            # Transforms the reference into bytes and sends them through the serial port
+            byte_reference=bytearray(struct.pack("f", theta_ref))
+            n_bytes_sent=self.serial_device.write(byte_reference)
+            
+            # Stores current system time for the next iteration and sends log through the terminal
             self.time_var=time()
-            print('Message sent at t = {} s\nBytes sent = {}\n'.format(self.time_var,a))
+            print('Message sent at t = {} s\nBytes sent = {}\nCurrent reference = {} rad\n'.format(self.time_var,n_bytes_sent,theta_ref))
+            self.previous_ref=theta_ref
 
         output_items[0][:] = input_items[0]
         return len(output_items[0])
@@ -988,7 +1035,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(752, 104)</value>
+      <value>(640, 112)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1000,7 +1047,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     </param>
     <param>
       <key>period</key>
-      <value>0.1</value>
+      <value>2</value>
     </param>
     <param>
       <key>port_name</key>
@@ -1023,11 +1070,11 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1080, 424)</value>
+      <value>(1088, 432)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -1074,11 +1121,11 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(848, 384)</value>
+      <value>(856, 392)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -1441,11 +1488,11 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(960, 184)</value>
+      <value>(968, 192)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -1804,7 +1851,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>fftsize</key>
@@ -1812,7 +1859,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(600, 416)</value>
+      <value>(608, 424)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -2015,7 +2062,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>frequency</key>
@@ -2023,7 +2070,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(16, 312)</value>
+      <value>(24, 320)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2050,6 +2097,12 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
       <value>SNR</value>
     </param>
   </block>
+  <connection>
+    <source_block_id>analog_const_source_x_0</source_block_id>
+    <sink_block_id>epy_block_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
   <connection>
     <source_block_id>band_pass_filter_0</source_block_id>
     <sink_block_id>blocks_multiply_conjugate_cc_0</sink_block_id>

@@ -516,7 +516,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>freq</key>
@@ -984,7 +984,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(872, 52)</value>
+      <value>(960, 52)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1044,6 +1044,57 @@
     <param>
       <key>id</key>
       <value>blocks_multiply_const_vxx_1_0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_multiply_const_vxx</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>const</key>
+      <value>56.0/12*56.0/12</value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(608, 76)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>180</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_multiply_const_vxx_1_1</value>
     </param>
     <param>
       <key>type</key>
@@ -1137,7 +1188,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(440, 160)</value>
+      <value>(392, 240)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1184,7 +1235,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(944, 212)</value>
+      <value>(976, 212)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1231,7 +1282,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(760, 156)</value>
+      <value>(792, 156)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1258,7 +1309,7 @@
     <key>epy_block</key>
     <param>
       <key>baud_rate</key>
-      <value>19200</value>
+      <value>250000</value>
     </param>
     <param>
       <key>alias</key>
@@ -1266,7 +1317,7 @@
     </param>
     <param>
       <key>_io_cache</key>
-      <value>('Float Serial Sink', 'blk', [('baud_rate', '19200'), ('port_name', "'/dev/cu.usbmodem1421'"), ('period', '1.0')], [('0', 'float', 1)], [('0', 'float', 1)], ' Serial Port Block\n    It starts a communication with the specified port and\n    the specified baud rate. It sends the reference for\n    the motor with a certain frequency, specified by period', ['period'])</value>
+      <value>('Float Serial Sink', 'blk', [('baud_rate', '250000'), ('port_name', "'/dev/cu.usbmodem1421'"), ('period', '0.1')], [('0', 'float', 1)], [('0', 'float', 1)], ' Serial Port Block\n    It starts a communication with the specified port and\n    the specified baud rate. It sends the reference for\n    the motor with a certain frequency, specified by period', ['period'])</value>
     </param>
     <param>
       <key>_source_code</key>
@@ -1284,7 +1335,7 @@ class blk(gr.sync_block):
     the specified baud rate. It sends the reference for
     the motor with a certain frequency, specified by period"""
 
-    def __init__(self, baud_rate=19200, port_name='/dev/cu.usbmodem1421', period=1.0):
+    def __init__(self, baud_rate=250000, port_name='/dev/cu.usbmodem1421', period=0.1):
         gr.sync_block.__init__(
             self,
             name='Float Serial Sink',   # will show up in GRC
@@ -1329,7 +1380,7 @@ class blk(gr.sync_block):
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(552, 144)</value>
+      <value>(496, 144)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1368,7 +1419,7 @@ class blk(gr.sync_block):
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1120, 216)</value>
+      <value>(1152, 216)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -1423,7 +1474,7 @@ class blk(gr.sync_block):
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>fftsize</key>
@@ -2320,7 +2371,7 @@ class blk(gr.sync_block):
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>fftsize</key>
@@ -2982,7 +3033,7 @@ class blk(gr.sync_block):
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(672, 32)</value>
+      <value>(776, 32)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -3981,7 +4032,7 @@ class blk(gr.sync_block):
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -6413,6 +6464,12 @@ class blk(gr.sync_block):
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>blocks_multiply_const_vxx_1_1</source_block_id>
+    <sink_block_id>epy_block_1</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
     <source_block_id>blocks_multiply_xx_0</source_block_id>
     <sink_block_id>uhd_usrp_sink_1</sink_block_id>
     <source_key>0</source_key>
@@ -6432,7 +6489,7 @@ class blk(gr.sync_block):
   </connection>
   <connection>
     <source_block_id>blocks_transcendental_1</source_block_id>
-    <sink_block_id>epy_block_1</sink_block_id>
+    <sink_block_id>blocks_multiply_const_vxx_1_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
