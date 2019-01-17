@@ -26,7 +26,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -97,7 +97,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -124,7 +124,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -151,7 +151,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -178,7 +178,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -205,7 +205,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -263,7 +263,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -322,7 +322,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -349,7 +349,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -376,7 +376,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -403,7 +403,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -430,7 +430,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -446,7 +446,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>35</value>
+      <value>30</value>
     </param>
   </block>
   <block>
@@ -646,7 +646,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>type</key>
@@ -725,7 +725,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>type</key>
@@ -796,7 +796,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -882,7 +882,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -929,7 +929,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -980,7 +980,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1031,7 +1031,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1074,7 +1074,7 @@
     </param>
     <param>
       <key>const</key>
-      <value>56.0/12*56.0/12</value>
+      <value>-56.0/12*56.0/12</value>
     </param>
     <param>
       <key>affinity</key>
@@ -1082,7 +1082,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1227,7 +1227,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>name</key>
@@ -1317,7 +1317,7 @@
     </param>
     <param>
       <key>_io_cache</key>
-      <value>('Float Serial Sink', 'blk', [('baud_rate', '250000'), ('port_name', "'/dev/cu.usbmodem1421'"), ('period', '0.1')], [('0', 'float', 1)], [('0', 'float', 1)], ' Serial Port Block\n    It starts a communication with the specified port and\n    the specified baud rate. It sends the reference for\n    the motor with a certain frequency, specified by period', ['period'])</value>
+      <value>('Float Serial Sink', 'blk', [('baud_rate', '250000'), ('port_name', "'/dev/cu.usbmodem1421'"), ('period', '1.0')], [('0', 'float', 1)], [('0', 'float', 1)], ' Serial Port Block\n    It starts a communication with the specified port and\n    the specified baud rate. It sends the reference for\n    the motor with a certain frequency, specified by period', ['period'])</value>
     </param>
     <param>
       <key>_source_code</key>
@@ -1335,7 +1335,7 @@ class blk(gr.sync_block):
     the specified baud rate. It sends the reference for
     the motor with a certain frequency, specified by period"""
 
-    def __init__(self, baud_rate=250000, port_name='/dev/cu.usbmodem1421', period=0.1):
+    def __init__(self, baud_rate=250000, port_name='/dev/cu.usbmodem1421', period=1.0):
         gr.sync_block.__init__(
             self,
             name='Float Serial Sink',   # will show up in GRC
@@ -1392,7 +1392,7 @@ class blk(gr.sync_block):
     </param>
     <param>
       <key>period</key>
-      <value>0.1</value>
+      <value>0.5</value>
     </param>
     <param>
       <key>port_name</key>
@@ -1415,7 +1415,7 @@ class blk(gr.sync_block):
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1773,7 +1773,7 @@ class blk(gr.sync_block):
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>fftsize</key>
@@ -2662,7 +2662,7 @@ class blk(gr.sync_block):
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -3029,7 +3029,7 @@ class blk(gr.sync_block):
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -6190,7 +6190,7 @@ class blk(gr.sync_block):
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
